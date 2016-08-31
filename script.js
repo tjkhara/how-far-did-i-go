@@ -6,7 +6,7 @@ function displayLocation(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
 
-  var googleLoc = new google.maps.Latlng(
+  var googleLoc = new google.maps.LatLng(
     position.coords.latitude,
     position.coords.longitude);
   locations.push(googleLoc);
