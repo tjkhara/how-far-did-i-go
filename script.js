@@ -1,5 +1,5 @@
 
-var trackId = null;
+var trackId;
 var locations = [];
 
 function displayLocation(position) {
