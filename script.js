@@ -5,7 +5,7 @@ var locations = [];
 function displayLocation(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
-  
+
   var googleLoc = new google.maps.Latlng(
     position.coords.latitude,
     position.coords.longitude);
@@ -35,18 +35,18 @@ function clearTracking() {
 
 function computeTotalDistance() {
   var totalDistance = 0;
-  
+
   if(locations.length > 1) {
     for(var i = 1; i < locations.length; i++) {
       totalDistance += google.maps.geometry.spherical.computeDistanceBetween(locations[i-1], locations[i]);
     }
   }
-  
+
   return totalDistance;
-  
+
 }
 
-  
+
 
 
 
@@ -56,7 +56,7 @@ window.onload = function() {
  trackButton.onclick = function(e) {
    e.preventDefault();
    if(trackButton.innerHTML === "Start") {
-     trackButton.innerHTML === "Stop";
+     trackButton.innerHTML = "Stop";
      trackMe();
    } else {
      trackButton.innerHTML = "Start";
