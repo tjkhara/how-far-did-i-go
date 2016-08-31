@@ -62,14 +62,14 @@ window.onload = function() {
      trackButton.innerHTML = "Start";
      clearTracking();
      var d = computeTotalDistance();
-     var miles = d/1.6;
      if(d > 0) {
-       d = Math.round(d*1000)/1000;
+       d = Math.round(d * 1000)/1000;
+       var miles = d/1.6;
        pDistance.innerHTML = "Total distance traveled: " + d + "km";
        pDistance.innerHTML += "<br>Total distance traveled: " + miles + "m" + "<br>";
      } else {
        pDistance.innerHTML = "You didn't travel anywhere at all."
-     };
-   };
- }
-}
+     }
+   }
+ };
+};
